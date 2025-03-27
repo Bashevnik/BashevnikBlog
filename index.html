@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Blog on Web Development</title>
+    <link rel="stylesheet" href="CSS/CSS_index/index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="logo">My Blog on Web Development</div>
+        <nav>
+            <a href="index.html">Articles</a>
+            <a href="categories.html">Categories</a>
+            <a href="about.html">About Me</a>
+        </nav>
+    </header>
+
+    <section class="blog-posts">
+        <div class="posts-content">
+            <h1 class="section-title">Articles</h1>
+            <p class="section-subtitle">Sharing tips, tutorials, and insights for aspiring web developers.</p>
+        </div>
+    </section>
+
+<section class="categories">
+    <div class="categories-content">
+        <h2 class="section-title">Popular Categories</h2>
+        <div class="category-list">
+            <a href="categories.html" class="category">All</a>
+            <a href="categories.html#html" class="category">HTML</a>
+            <a href="categories.html#css" class="category">CSS</a>
+            <a href="categories.html#javascript" class="category">JavaScript</a>
+            <a href="categories.html#projects" class="category">Projects</a>
+        </div>
+    </div>
+</section>
+
+    <section class="search">
+        <div class="search-content">
+            <input type="text" id="searchInput" placeholder="Search articles..." onkeyup="searchArticles()">
+        </div>
+    </section>
+
+    <section class="featured-post">
+        <div class="featured-content">
+            <h2 class="section-title">Featured Article</h2>
+            <div class="post" data-category="html">
+                <div class="post-image">
+                    <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3" alt="Code on Screen">
+                </div>
+                <div class="post-text">
+                    <h3 class="post-title">
+                        <a href="article1.html">How to Build a Website from Scratch in 3 Days</a>
+                    </h3>
+                    <p class="post-meta">Published on March 20, 2025</p>
+                    <p class="post-description">A step-by-step guide for beginners with examples of HTML and CSS code. Learn how to create a fully functional website in just 3 days!</p>
+                    <a href="article1.html" class="read-more">Read More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="blog-posts">
+        <div class="posts-content">
+            <h2 class="section-title">All Articles</h2>
+            <div class="post" data-category="css">
+                <div class="post-image">
+                    <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085" alt="Laptop">
+                </div>
+                <div class="post-text">
+                    <h3 class="post-title">
+                        <a href="article2.html">
+                            5 Tips to Improve UX/UI on Your Website
+                        </a>
+                    </h3>
+                    <p class="post-meta">Published on March 15, 2025</p>
+                    <p class="post-description">Learn how to make your website more user-friendly with these simple tricks.</p>
+                    <a href="article2.html" class="read-more">Read More</a>
+                </div>
+            </div>
+            <div class="post" data-category="javascript">
+                <div class="post-image">
+                    <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c" alt="Responsive Design">
+                </div>
+                <div class="post-text">
+                    <h3 class="post-title">
+                        <a href="article3.html">
+                            Why Responsive Design Matters in 2025
+                        </a></h3>
+                    <p class="post-meta">Published on March 10, 2025</p>
+                    <p class="post-description">Discover the importance of mobile-friendly websites and how to achieve it.</p>
+                    <a href="article3.html" class="read-more">Read More</a>
+                </div>
+            </div>
+            <div class="post" data-category="projects">
+                <div class="post-image">
+                    <img src="https://images.unsplash.com/photo-1534972195531-d756b9bfa9f2" alt="Code Editor">
+                </div>
+                <div class="post-text">
+                    <h3 class="post-title">
+                        <a href="article4.html">How I Built a Restaurant Booking Form</a>
+                    </h3>
+                    <p class="post-meta">Published on March 5, 2025</p>
+                    <p class="post-description">A detailed guide on creating a booking form using HTML, CSS, and Formspree.</p>
+                    <a href="article4.html" class="read-more">Read More</a>
+                </div>
+            </div>
+            <div class="post" data-category="html">
+                <div class="post-image">
+                    <img src="https://images.unsplash.com/photo-1507238691740-187a5b1d37b8" alt="Web Development">
+                </div>
+                <div class="post-text">
+                    <h3 class="post-title">
+                        <a href="article5.html">Top 5 HTML Tips for Beginners</a>
+                    </h3>
+                    <p class="post-meta">Published on March 1, 2025</p>
+                    <p class="post-description">Essential HTML tips to help you start your web development journey.</p>
+                    <a href="article5.html" class="read-more">Read More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="subscribe">
+        <div class="subscribe-content">
+            <h2 class="section-title">Stay Updated</h2>
+            <p class="section-subtitle">Subscribe to get the latest articles directly to your inbox.</p>
+            <form action="https://formspree.io/f/xnnpzkdw" method="POST" class="subscribe-form">
+                <input type="email" name="email" placeholder="Your Email" required>
+                <button type="submit" class="btn">Subscribe</button>
+            </form>
+        </div>
+    </section>
+
+    <section class="cta">
+        <h2 class="section-title">Want to Collaborate?</h2>
+        <a href="https://www.fiverr.com/alexbashevnik" class="btn">Hire Me on Fiverr</a>
+    </section>
+
+    <footer>
+        <p>© 2025 My Blog on Web Development. Design by HTML5 UP</p>
+    </footer>
+
+    <script src="JS/JS_BLOG/blog.js"></script>
+</body>
+</html>

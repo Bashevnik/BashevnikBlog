@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Why Responsive Design Matters in 2025</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="CSS/CSS_article3/article3.css" />
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <a href="index.html">My Blog on Web Development</a>
+      </div>
+      <nav>
+        <a href="index.html">Articles</a>
+        <a href="categories.html">Categories</a>
+        <a href="about.html">About Me</a>
+      </nav>
+    </header>
+
+    <section class="article-hero">
+      <div class="article-content">
+        <h1 class="article-title">Why Responsive Design Matters in 2025</h1>
+        <p class="article-meta">
+          Published on March 10, 2025 • <span class="tag">Trends</span>
+        </p>
+        <img
+          src="https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7"
+          alt="Responsive Design"
+          class="article-image"
+        />
+      </div>
+    </section>
+
+    <section class="article-body">
+      <div class="article-content">
+        <h2>Introduction</h2>
+        <p>
+          In 2025, responsive design is more critical than ever. With the
+          proliferation of devices—smartphones, tablets, laptops, smartwatches,
+          and even foldable screens—ensuring your website looks and functions well
+          on all screen sizes is non-negotiable. In this article, I'll explore five
+          reasons why responsive design matters in 2025 and provide practical
+          examples to help you implement it.
+        </p>
+
+        <h2>Reason 1: The Rise of Mobile Traffic</h2>
+        <p>
+          According to Statista, mobile devices accounted for over 60% of global
+          web traffic in 2024, and this trend is expected to continue in 2025. If
+          your website isn’t mobile-friendly, you’re losing more than half of your
+          potential audience.
+        </p>
+        <h3>Mobile Traffic Growth (2015-2024)</h3>
+        <svg class="traffic-chart" width="100%" height="200">
+          <rect x="0" width="50" height="50" fill="#e67e22">
+            <title>2015: 30%</title>
+          </rect>
+          <rect x="60" width="50" height="80" fill="#e67e22">
+            <title>2018: 45%</title>
+          </rect>
+          <rect x="120" width="50" height="120" fill="#e67e22">
+            <title>2021: 55%</title>
+          </rect>
+          <rect x="180" width="50" height="150" fill="#e67e22">
+            <title>2024: 60%</title>
+          </rect>
+        </svg>
+        <p><em>Data source: Statista (2024)</em></p>
+
+        <h3>Example: Mobile Navigation</h3>
+        <p>
+          Here’s a simple hamburger menu for mobile devices. Resize your browser
+          window to see it in action:
+        </p>
+        <div class="mobile-nav-example">
+          <button class="hamburger" onclick="toggleMenu()">☰</button>
+          <nav class="mobile-menu">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+          </nav>
+        </div>
+        <p>Here’s the code for the hamburger menu:</p>
+        <pre><code class="language-html"><div class="mobile-nav-example">
+    <button class="hamburger" onclick="toggleMenu()">☰</button>
+    <nav class="mobile-menu">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</div></code></pre>
+
+        <h2>Reason 2: Better SEO Performance</h2>
+        <p>
+          Google has been using mobile-first indexing since 2019, meaning it
+          primarily uses the mobile version of your site for ranking. A
+          non-responsive site can hurt your SEO rankings, leading to lower
+          visibility.
+        </p>
+        <p>
+          <strong>Tip:</strong> Use Google’s
+          <a href="https://search.google.com/test/mobile-friendly" target="_blank"
+            >Mobile-Friendly Test</a
+          >
+          to check if your site meets the criteria.
+        </p>
+
+        <h2>Reason 3: Improved User Experience (UX)</h2>
+        <p>
+          A responsive design ensures users have a seamless experience, whether
+          they’re on a phone, tablet, or desktop. For example, text should be
+          readable without zooming, and buttons should be easy to tap.
+        </p>
+        <h3>Example: Responsive Text and Buttons</h3>
+        <p>Here’s a paragraph and button that adjust based on screen size:</p>
+        <div class="responsive-example">
+          <p>
+            This text adjusts its size for better readability on all devices.
+          </p>
+          <button id="responsive-btn" class="responsive-btn">Click Me</button>
+          <p id="click-message" class="click-message" style="display: none;">
+            You clicked the button! This demonstrates a simple interaction.
+          </p>
+        </div>
+
+        <h2>Reason 4: Saves Time and Resources</h2>
+        <p>
+          Instead of building separate mobile and desktop versions of your site, a
+          responsive design allows you to maintain one codebase. This saves
+          development time and reduces maintenance costs.
+        </p>
+        <p>
+          <strong>Tip:</strong> Use CSS frameworks like Bootstrap or Tailwind CSS
+          to speed up responsive design implementation.
+        </p>
+
+        <h2>Reason 5: Emerging Tech Trends in 2025</h2>
+        <p>
+          In 2025, we’re seeing more foldable screens, smartwatches, and Hawkins
+          accessing the web. Responsive design ensures your site is ready for these
+          new technologies.
+        </p>
+        <p>For example, you can use CSS media queries to target specific device types:</p>
+        <pre><code class="language-css">@media (max-width: 400px) and (max-height: 600px) {
+    /* Styles for smartwatches or small foldable screens */
+    body {
+        font-size: 12px;
+    }
+}</code></pre>
+
+        <h2>Is Your Site Responsive? Take This Quick Test</h2>
+        <div class="responsive-test">
+          <p>Answer these questions to see if your site is ready for 2025:</p>
+          <form id="responsive-test-form">
+            <div class="test-question">
+              <p>1. Does your site look good on mobile devices?</p>
+              <label><input type="radio" name="q1" value="yes" /> Yes</label>
+              <label><input type="radio" name="q1" value="no" /> No</label>
+            </div>
+            <div class="test-question">
+              <p>
+                2. Have you tested your site with Google’s Mobile-Friendly Test?
+              </p>
+              <label><input type="radio" name="q2" value="yes" /> Yes</label>
+              <label><input type="radio" name="q2" value="no" /> No</label>
+            </div>
+            <div class="test-question">
+              <p>
+                3. Do buttons and links have a minimum size of 44x44 pixels for
+                touch devices?
+              </p>
+              <label><input type="radio" name="q3" value="yes" /> Yes</label>
+              <label><input type="radio" name="q3" value="no" /> No</label>
+            </div>
+            <button type="submit">Get Results</button>
+          </form>
+          <div id="test-result" class="test-result"></div>
+        </div>
+
+        <h2>Conclusion</h2>
+        <p>
+          Responsive design isn’t just a trend—it’s a necessity in 2025. It
+          improves user experience, boosts SEO, saves resources, and prepares your
+          site for future technologies. Start implementing responsive design today
+          to stay ahead of the curve.
+        </p>
+        <p>
+          Want to learn more? Check out my other articles or leave a comment below!
+        </p>
+      </div>
+    </section>
+
+    <section class="comments">
+      <div class="article-content">
+        <h2>Comments</h2>
+        <form
+        action="https://formspree.io/f/mldjlynr"
+                  method="POST"
+          class="comment-form"
+        >
+          <input type="text" name="name" placeholder="Your Name" required />
+          <textarea
+            name="comment"
+            placeholder="Your Comment"
+            required
+          ></textarea>
+          <button type="submit">Post Comment</button>
+        </form>
+        <div class="comment">
+          <p><strong>Emily Davis</strong> • March 11, 2025</p>
+          <p>
+            Great article! The mobile traffic stats really opened my eyes. I’ll be
+            implementing responsive design on my site this week.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta">
+      <h2 class="section-title">Want to Collaborate?</h2>
+      <a href="https://www.fiverr.com/alexbashevnik" class="btn"
+        >Hire Me on Fiverr</a
+      >
+    </section>
+
+    <button class="back-to-top" onclick="scrollToTop()">Back to Top</button>
+
+    <footer>
+      <p>© 2025 My Blog on Web Development. Design by HTML5 UP</p>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="JS/JS_article3/article3.js"></script>
+  </body>
+</html>

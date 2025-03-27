@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Top 5 HTML Tips for Beginners</title>
+    <link rel="stylesheet" href="CSS/CSS_article5/article5.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <a href="index.html">My Blog on Web Development</a></div>
+      <nav>
+        <a href="index.html">Articles</a>
+        <a href="categories.html">Categories</a>
+        <a href="about.html">About Me</a>
+      </nav>
+    </header>
+
+    <div class="article-hero">
+      <p class="article-meta">
+        Published on March 20, 2025 • <span class="tag">Beginner</span>
+      </p>
+      <img
+        src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8aHRtbCUyMGNvZGV8ZW58MHx8MHx8fDA%3D"
+        alt="HTML Code on Screen"
+      />
+    </div>
+
+    <div class="article-body">
+      <h2>Introduction</h2>
+      <p>
+        HTML (HyperText Markup Language) is the foundation of every website. As a
+        beginner, learning HTML can feel overwhelming, but with the right tips, you
+        can write clean, effective code in no time. In this article, I’ll share my
+        top 5 HTML tips to help you get started on your web development journey.
+      </p>
+
+      <h2>Tip 1: Use Semantic Tags</h2>
+      <p>
+        Semantic HTML tags like header, nav, main, and footer make your code more
+        meaningful and easier to understand. They also improve accessibility and
+        help search engines understand your website better.
+      </p>
+      <h3>Example: Semantic Structure</h3>
+      <p>Here’s an example of a webpage using semantic tags:</p>
+      <pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+  &lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;My Website&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;header&gt;
+      &lt;h1&gt;Welcome to My Website&lt;/h1&gt;
+      &lt;nav class="example-nav"&gt;
+        &lt;a href="#home"&gt;Home&lt;/a&gt;
+        &lt;a href="#about"&gt;About&lt;/a&gt;
+      &lt;/nav&gt;
+    &lt;/header&gt;
+    &lt;main&gt;
+      &lt;section&gt;
+        &lt;h2&gt;About Me&lt;/h2&gt;
+        &lt;p&gt;This is a paragraph about me.&lt;/p&gt;
+      &lt;/section&gt;
+    &lt;/main&gt;
+    &lt;footer&gt;
+      &lt;p&gt;© 2025 My Website&lt;/p&gt;
+    &lt;/footer&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+      <p>
+        <strong>Try it:</strong> Copy this code into an HTML file and open it in
+        your browser to see the structure in action.
+      </p>
+
+      <h2>Tip 2: Always Close Your Tags</h2>
+      <p>
+        HTML tags must be properly closed to avoid problems. For example,
+        forgetting to close a paragraph tag can cause your page to display
+        incorrectly.
+      </p>
+      <h3>Example: Incorrect vs Correct</h3>
+      <p>Here’s an incorrect example:</p>
+      <pre><code class="language-html">&lt;p&gt;This is a paragraph
+&lt;p&gt;This is another paragraph</code></pre>
+      <p>And here’s the correct way:</p>
+      <pre><code class="language-html">&lt;p&gt;This is a paragraph&lt;/p&gt;
+&lt;p&gt;This is another paragraph&lt;/p&gt;</code></pre>
+      <p>
+        <strong>Note:</strong> Some tags, like the image tag, are self-closing
+        (e.g., the image tag with a source and alt attribute).
+      </p>
+
+      <h2>Tip 3: Add Alt Attributes to Images</h2>
+      <p>
+        The alt attribute provides a text description of an image, which is
+        important for accessibility. Screen readers use it to describe images to
+        visually impaired users, and it also helps with search engine optimization
+        (SEO).
+      </p>
+      <h3>Example: Image with Alt Text</h3>
+      <p>Here’s an image with an alt attribute:</p>
+      <img
+        src="https://images.unsplash.com/photo-1516321497487-e288fb19713f"
+        alt="Laptop on a desk with a coffee cup"
+        class="example-image"
+      />
+      <p>
+        <strong>Screen Reader Output:</strong> "Laptop on a desk with a coffee
+        cup"
+      </p>
+      <p>Here’s the same image without an alt attribute:</p>
+      <img
+        src="https://images.unsplash.com/photo-1516321497487-e288fb19713f"
+        class="example-image"
+      />
+      <p>
+        <strong>Screen Reader Output:</strong> "Image" (No description available)
+      </p>
+      <p>Here’s the code for the image with the alt attribute:</p>
+      <pre><code class="language-html">&lt;img src="image.jpg" alt="Laptop on a desk with a coffee cup"&gt;</code></pre>
+      <p>
+        <strong>Tip:</strong> Always describe the image in a way that explains its
+        purpose or content.
+      </p>
+
+      <h2>Tip 4: Use Comments to Organize Your Code</h2>
+      <p>
+        Comments help you and others understand your code later. In HTML, comments
+        are written using a special format.
+      </p>
+      <h3>Example: Commented Code</h3>
+      <pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+  &lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;My Website&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;!-- Header Section --&gt;
+    &lt;header&gt;
+      &lt;h1&gt;Welcome to My Website&lt;/h1&gt;
+    &lt;/header&gt;
+    &lt;!-- Main Content --&gt;
+    &lt;main&gt;
+      &lt;p&gt;This is the main content.&lt;/p&gt;
+    &lt;/main&gt;
+    &lt;!-- Footer Section --&gt;
+    &lt;footer&gt;
+      &lt;p&gt;© 2025 My Website&lt;/p&gt;
+    &lt;/footer&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+      <p>
+        <strong>Try it:</strong> Add comments to your own HTML code to keep it
+        organized.
+      </p>
+
+      <h2>Tip 5: Validate Your HTML Code</h2>
+      <p>
+        Using an HTML validator ensures your code is error-free and follows web
+        standards. A popular tool is the W3C Markup Validation Service.
+      </p>
+      <h3>Example: Validation Process</h3>
+      <p>Here’s how to validate your code:</p>
+      <ol>
+        <li>Go to the W3C validator website (validator.w3.org).</li>
+        <li>Paste your HTML code or upload your file.</li>
+        <li>Click "Check" to see if there are any errors.</li>
+      </ol>
+      <p>
+        <strong>Try it:</strong> Copy the semantic HTML example from Tip 1 and
+        validate it using the W3C validator.
+      </p>
+
+      <h2>Conclusion</h2>
+      <p>
+        HTML is the first step to becoming a web developer, and these 5 tips will
+        help you write better code from the start. Use semantic tags, close your
+        tags, add alt attributes, comment your code, and validate your work. Keep
+        practicing, and you’ll be building amazing websites in no time!
+      </p>
+      <p>Have questions or want to share your own tips? Leave a comment below!</p>
+    </div>
+
+    <div class="comments">
+      <h2>Comments</h2>
+      <form
+        action="https://formspree.io/f/movelwql"
+        method="POST"
+        class="comment-form"
+      >
+        <input type="text" name="name" placeholder="Your Name" required />
+        <textarea name="comment" placeholder="Your Comment" required></textarea>
+        <button type="submit">Post Comment</button>
+      </form>
+      <div class="comment">
+        <p><strong>Sarah Lee</strong> • March 21, 2025</p>
+        <p>
+          Thanks for the tips! I didn’t know about semantic tags before. They make
+          so much sense!
+        </p>
+      </div>
+    </div>
+
+    <div class="cta">
+      <h2>Want to Collaborate?</h2>
+      <a href="https://www.fiverr.com/alexbashevnik" class="btn"
+        >Hire Me on Fiverr</a
+      >
+    </div>
+
+    <button class="back-to-top" onclick="scrollToTop()">Back to Top</button>
+
+    <footer>
+      <p>© 2025 My Blog on Web Development. Design by HTML5 UP</p>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="JS/JS_article5/article5.js"></script>
+  </body>
+</html>

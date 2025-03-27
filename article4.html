@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How I Built a Restaurant Booking Form</title>
+    <link rel="stylesheet" href="CSS/CSS_article4/article4.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.html">My Blog on Web Development</a>
+        </div>
+        <nav>
+            <a href="index.html">Articles</a>
+            <a href="categories.html">Categories</a>
+            <a href="about.html">About Me</a>
+        </nav>
+    </header>
+
+    <!-- Главная секция -->
+    <section class="article-hero">
+        <div class="article-content">
+            <h1 class="article-title">How I Built a Restaurant Booking Form</h1>
+            <p class="article-meta">Published on March 5, 2025 • <span class="tag">Project</span></p>
+            <img src="https://images.unsplash.com/photo-1534972195531-d756b9bfa9f2" alt="Code Editor" class="article-image">
+        </div>
+    </section>
+
+    <!-- Содержание статьи -->
+    <section class="article-body">
+        <div class="article-content">
+            <h2>Introduction</h2>
+            <p>In this article, I'll walk you through how I built a restaurant booking form for a client. This form allows users to reserve a table by entering their name, date, time, number of guests, and contact details. We'll use HTML, CSS, JavaScript, and Formspree to handle form submissions. By the end, you'll have a fully functional booking form that you can integrate into any website.</p>
+
+            <h2>Step 1: Planning the Form</h2>
+            <p>Before coding, I planned the fields we need for the booking form:</p>
+            <ul>
+                <li>Name (text input)</li>
+                <li>Date (date input)</li>
+                <li>Time (time input)</li>
+                <li>Number of Guests (number input)</li>
+                <li>Email (email input)</li>
+                <li>Phone Number (tel input)</li>
+                <li>Special Requests (textarea)</li>
+            </ul>
+            <p>I decided to use Formspree to handle form submissions, as it’s a simple and free solution for small projects.</p>
+
+            <h2>Step 2: Creating the HTML Structure</h2>
+            <p>Let's create the HTML structure for the form. I also added a preview of the form below so you can try it out.</p>
+            <h3>Preview: Restaurant Booking Form</h3>
+            <form id="booking-form" class="booking-form" action="https://formspree.io/f/xpwpjaby" method="POST">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" placeholder="Your Name" required>
+                    <span class="error-message" id="name-error"></span>
+                </div>
+                <div class="form-group">
+                    <label for="date">Date</label>
+                    <input type="date" id="date" name="date" required>
+                    <span class="error-message" id="date-error"></span>
+                </div>
+                <div class="form-group">
+                    <label for="time">Time</label>
+                    <input type="time" id="time" name="time" required>
+                    <span class="error-message" id="time-error"></span>
+                </div>
+                <div class="form-group">
+                    <label for="guests">Number of Guests</label>
+                    <input type="number" id="guests" name="guests" min="1" max="20" required>
+                    <span class="error-message" id="guests-error"></span>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="your@email.com" required>
+                    <span class="error-message" id="email-error"></span>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" placeholder="+1234567890" required>
+                    <span class="error-message" id="phone-error"></span>
+                </div>
+                <div class="form-group">
+                    <label for="requests">Special Requests</label>
+                    <textarea id="requests" name="requests" placeholder="Any special requests?"></textarea>
+                </div>
+                <button type="submit">Book Now</button>
+            </form>
+            <p>Here's the HTML code for the form:</p>
+            <pre><code class="language-html"><form id="booking-form" class="booking-form" action="https://formspree.io/f/xkgjvwyp" method="POST">
+    <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" placeholder="Your Name" required>
+        <span class="error-message" id="name-error"></span>
+    </div>
+    <div class="form-group">
+        <label for="date">Date</label>
+        <input type="date" id="date" name="date" required>
+        <span class="error-message" id="date-error"></span>
+    </div>
+    <div class="form-group">
+        <label for="time">Time</label>
+        <input type="time" id="time" name="time" required>
+        <span class="error-message" id="time-error"></span>
+    </div>
+    <div class="form-group">
+        <label for="guests">Number of Guests</label>
+        <input type="number" id="guests" name="guests" min="1" max="20" required>
+        <span class="error-message" id="guests-error"></span>
+    </div>
+    <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="your@email.com" required>
+        <span class="error-message" id="email-error"></span>
+    </div>
+    <div class="form-group">
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" name="phone" placeholder="+1234567890" required>
+        <span class="error-message" id="phone-error"></span>
+    </div>
+    <div class="form-group">
+        <label for="requests">Special Requests</label>
+        <textarea id="requests" name="requests" placeholder="Any special requests?"></textarea>
+    </div>
+    <button type="submit">Book Now</button>
+</form></code></pre>
+
+            <h2>Step 3: Styling with CSS</h2>
+            <p>Next, I styled the form to make it look clean and professional. I also added visual feedback for errors and ensured the form is responsive. The CSS is in a separate file, <code>CSS/CSS_article4/article4.css</code>.</p>
+
+            <h2>Step 4: Adding Validation with JavaScript</h2>
+            <p>I added JavaScript to validate the form before submission. For example, I ensured the date is not in the past, the number of guests is between 1 and 20, and the phone number follows a valid format. The JavaScript is in a separate file, <code>JS/JS_article4/article4.js</code>.</p>
+            <p>Try submitting the form above with invalid data to see the validation in action!</p>
+
+            <h2>Step 5: Testing and Publishing</h2>
+            <p>Before publishing, I tested the form on different devices to ensure it’s responsive. I also tested the Formspree integration by submitting a few test bookings and checking my email for the submissions.</p>
+            <p>To publish the form, you can add it to your website by copying the HTML, CSS, and JavaScript files into your project. If you're using a static site, you can host it on GitHub Pages or Netlify.</p>
+            <ol>
+                <li>Create a new folder for your project (e.g., <code>restaurant-booking</code>).</li>
+                <li>Add the HTML, CSS, and JavaScript files to the folder.</li>
+                <li>Upload the folder to your hosting provider.</li>
+                <li>Test the form by submitting a booking and checking your email.</li>
+            </ol>
+
+            <h2>Conclusion</h2>
+            <p>Congratulations! You've built a restaurant booking form that’s functional, user-friendly, and responsive. You can enhance it further by adding features like a confirmation modal, email notifications for users, or integration with a backend to store bookings.</p>
+            <p>Have questions or ideas for improvement? Leave a comment below!</p>
+        </div>
+    </section>
+
+    <!-- Секция комментариев -->
+    <section class="comments">
+        <div class="article-content">
+            <h2>Comments</h2>
+            <form action="https://formspree.io/f/xvgkbpld" method="POST" class="comment-form">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <textarea name="comment" placeholder="Your Comment" required></textarea>
+                <button type="submit">Post Comment</button>
+            </form>
+            <div class="comment">
+                <p><strong>Mark Johnson</strong> • March 6, 2025</p>
+                <p>Great tutorial! I added this form to my restaurant's website, and it works perfectly. Thanks!</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Призыв к действию -->
+    <section class="cta">
+        <h2 class="section-title">Want to Collaborate?</h2>
+        <a href="https://www.fiverr.com/alexbashevnik" class="btn">Hire Me on Fiverr</a>
+    </section>
+
+    <!-- Кнопка "Back to Top" -->
+    <button class="back-to-top" onclick="scrollToTop()">Back to Top</button>
+
+    <!-- Футер -->
+    <footer>
+        <p>© 2025 My Blog on Web Development. Design by HTML5 UP</p>
+    </footer>
+
+    <!-- Подключение JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="JS/JS_article4/article4.js"></script>
+</body>
+</html>

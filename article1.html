@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How to Build a Website from Scratch in 3 Days</title>
+    <link rel="stylesheet" href="CSS/CSS_article1/article1.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Шапка -->
+    <header>
+        <div class="logo">
+            <a href="index.html">My Blog on Web Development</a></div>
+        <nav>
+            <a href="index.html">Articles</a>
+            <a href="categories.html">Categories</a>
+            <a href="about.html">About Me</a>
+        </nav>
+    </header>
+
+    <!-- Главная секция -->
+    <section class="article-hero">
+        <div class="article-content">
+            <h1 class="article-title">How to Build a Website from Scratch in 3 Days</h1>
+            <p class="article-meta">Published on March 20, 2025 • <span class="tag">Tutorial</span></p>
+            <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3" alt="Code on Screen" class="article-image">
+        </div>
+    </section>
+
+    <!-- Содержание статьи -->
+    <section class="article-body">
+        <div class="article-content">
+            <h2>Introduction</h2>
+            <p>Building a website from scratch might seem daunting, but with the right plan, you can create a simple, functional site in just 3 days! This guide is for beginners who know the basics of HTML, CSS, and JavaScript. By the end, you'll have a personal portfolio site that you can share with the world.</p>
+            <p><strong>What you'll need:</strong></p>
+            <ul>
+                <li>A code editor (like VS Code)</li>
+                <li>A browser (like Chrome)</li>
+                <li>3 days of focused work (2-3 hours per day)</li>
+            </ul>
+
+            <h2>Day 1: Planning and Basic Structure (HTML)</h2>
+            <h3>Step 1: Choose a Theme</h3>
+            <p>Let's build a personal portfolio site to showcase your skills. It will have a homepage with a header, an "About Me" section, a "Projects" section, and a contact form.</p>
+
+            <h3>Step 2: Set Up Your Project</h3>
+            <p>Create a new folder called <code>portfolio</code>. Inside it, create three files: <code>index.html</code>, <code>styles.css</code>, and <code>script.js</code>.</p>
+
+            <h3>Step 3: Create the HTML Structure</h3>
+            <p>Open <code>index.html</code> and add the following HTML structure:</p>
+            <pre><code class="language-html"><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="article1.html">
+</head>
+<body>
+    <header>
+        <h1>My Portfolio</h1>
+        <nav>
+            <a href="#about">About</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <p>Hi, I'm [Your Name]! I'm a web developer passionate about creating beautiful websites.</p>
+    </section>
+
+    <section id="projects">
+        <h2>My Projects</h2>
+        <div class="project">
+            <h3>Project 1</h3>
+            <p>A simple landing page built with HTML and CSS.</p>
+        </div>
+        <div class="project">
+            <h3>Project 2</h3>
+            <p>A to-do list app using JavaScript.</p>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <form action="https://formspree.io/oleksandrbasevnik@gmail.com" method="POST">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Your Message" required></textarea>
+            <button type="submit">Send</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>© 2025 [Your Name]. All rights reserved.</p>
+    </footer>
+
+    <button class="back-to-top" onclick="scrollToTop()">Back to Top</button>
+
+    <script src="script.js"></script>
+</body>
+</html></code></pre>
+            <p>Save <code>index.html</code>. Open it in your browser to see the basic structure.</p>
+
+            <h2>Day 2: Styling with CSS</h2>
+            <h3>Step 1: Add Basic Styles</h3>
+            <p>Open <code>styles.css</code> and add the following styles to make your site look clean and modern:</p>
+            <pre><code class="language-css">/* Reset styles */
+</code></pre>
+            <p>Save <code>styles.css</code> and refresh your browser. Your site should now look much better!</p>
+
+            <h2>Day 3: Adding Interactivity and Publishing</h2>
+            <h3>Step 1: Add a "Back to Top" Button</h3>
+            <p>The "Back to Top" button is already in your <code>index.html</code>. Now, let's add the JavaScript to make it work. Open <code>script.js</code> and add the following code:</p>
+            <pre><code class="language-javascript">window.onscroll = function() {
+    const backToTopButton = document.querySelector('.back-to-top');
+    backToTopButton.style.display = window.scrollY > 300 ? 'block' : 'none';
+};
+
+function scrollToTop() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+}</code></pre>
+
+            <h3>Step 2: Publish Your Site</h3>
+            <p>You can host your site for free using GitHub Pages:</p>
+            <ol>
+                <li>Create a GitHub account if you don't have one.</li>
+                <li>Create a new repository named <code>[your-username].github.io</code>.</li>
+                <li>Upload your <code>portfolio</code> folder (containing <code>index.html</code>, <code>styles.css</code>, and <code>script.js</code>) to the repository.</li>
+                <li>Go to the repository settings, scroll to "GitHub Pages," and set the source to the <code>main</code> branch.</li>
+                <li>Visit <code>https://[your-username].github.io</code> to see your live site!</li>
+            </ol>
+
+            <h2>Conclusion</h2>
+            <p>Congratulations! You've built a website from scratch in just 3 days. You now have a personal portfolio with a clean design, a contact form, and a "Back to Top" button. To take it further, consider adding more projects, improving the design, or learning a framework like React.</p>
+            <p>Have questions? Leave a comment below or <a href="#contact">contact me</a>!</p>
+        </div>
+    </section>
+
+    <!-- Призыв к действию -->
+    <section class="cta">
+        <h2 class="section-title">Want to Collaborate?</h2>
+        <a href="https://www.fiverr.com/alexbashevnik" class="btn">Hire Me on Fiverr</a>
+    </section>
+
+    <!-- Кнопка "Back to Top" -->
+    <button class="back-to-top" onclick="scrollToTop()">Back to Top</button>
+
+    <!-- Футер -->
+    <footer>
+        <p>© 2025 My Blog on Web Development. Design by HTML5 UP</p>
+    </footer>
+
+    <!-- Подключение JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="JS/JS_article1/article1.js"></script>
+</body>
+</html>

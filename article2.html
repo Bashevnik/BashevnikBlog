@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5 Tips to Improve UX/UI on Your Website</title>
+    <link rel="stylesheet" href="CSS/CSS_article2/article2.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.html">My Blog on Web Development</a>
+        </div>        <nav>
+            <a href="index.html">Articles</a>
+            <a href="categories.html">Categories</a>
+            <a href="about.html">About Me</a>
+        </nav>
+    </header>
+
+    <section class="article-hero">
+        <div class="article-content">
+            <h1 class="article-title">5 Tips to Improve UX/UI on Your Website</h1>
+            <p class="article-meta">Published on March 15, 2025 • <span class="tag">Tutorial</span></p>
+            <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085" alt="Laptop" class="article-image">
+        </div>
+    </section>
+
+    <section class="article-body">
+        <div class="article-content">
+            <h2>Introduction</h2>
+            <p>Creating a website that users love isn't just about aesthetics—it's about making their experience seamless and enjoyable. In this article, I'll share 5 practical tips to improve your website's UX (User Experience) and UI (User Interface). Whether you're a beginner or a seasoned developer, these tips will help you create a more user-friendly site.</p>
+
+            <h2>Tip 1: Simplify Navigation</h2>
+            <p>Good navigation is the backbone of a great user experience. If users can't find what they're looking for, they'll leave your site. Keep your navigation simple, intuitive, and consistent across all pages.</p>
+            <h3>Example: Sticky Navigation</h3>
+            <p>Here's how to create a sticky navigation bar that stays at the top of the page:</p>
+            <pre><code class="language-html">&lt;header&gt;
+    &lt;h1&gt;My Website&lt;/h1&gt;
+    &lt;nav&gt;
+        &lt;a href="#home"&gt;Home&lt;/a&gt;
+        &lt;a href="#about"&gt;About&lt;/a&gt;
+        &lt;a href="#contact"&gt;Contact&lt;/a&gt;
+    &lt;/nav&gt;
+&lt;/header&gt;</code></pre>
+            <pre><code class="language-css">header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: #fff;
+    padding: 10px 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #333;
+}
+
+nav a:hover {
+    color: #e67e22;
+}</code></pre>
+            <p><strong>Try it now:</strong> Add this to your site and scroll down to see the navigation stay at the top!</p>
+
+            <h2>Tip 2: Use Contrasting Colors</h2>
+            <p>Contrast helps users distinguish between elements like text, buttons, and backgrounds. It also improves accessibility for users with visual impairments. Aim for a contrast ratio of at least 4.5:1 for text (per WCAG guidelines).</p>
+            <h3>Example: Toggle Dark Mode</h3>
+            <p>Click the button below to see how contrast works with a dark mode toggle:</p>
+            <button id="toggle-theme">Toggle Dark Mode</button>
+            <div class="contrast-example">
+                <p>This text should be easy to read in both light and dark modes.</p>
+                <button class="example-btn">Click Me</button>
+            </div>
+            <p>Here's the code to implement a dark mode toggle:</p>
+            <pre><code class="language-html">&lt;button id="toggle-theme"&gt;Toggle Dark Mode&lt;/button&gt;
+&lt;div class="contrast-example"&gt;
+    &lt;p&gt;This text should be easy to read in both light and dark modes.&lt;/p&gt;
+    &lt;button class="example-btn"&gt;Click Me&lt;/button&gt;
+&lt;/div&gt;</code></pre>
+            <pre><code class="language-css">.contrast-example {
+    padding: 20px;
+    background-color: #fff;
+    color: #333;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 20px 0;
+}
+
+body.dark-mode .contrast-example {
+    background-color: #333;
+    color: #fff;
+    border-color: #666;
+}
+
+.example-btn {
+    padding: 10px 20px;
+    background-color: #e67e22;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+body.dark-mode .example-btn {
+    background-color: #d35400;
+}</code></pre>
+            <pre><code class="language-javascript">document.getElementById('toggle-theme').addEventListener('click', () => {
+    document.body.classList.toggle('dark-mode');
+});</code></pre>
+            <p><strong>Tool Tip:</strong> Use <a href="https://webaim.org/resources/contrastchecker/" target="_blank">WebAIM Contrast Checker</a> to ensure your colors meet accessibility standards.</p>
+
+            <h2>Tip 3: Optimize Loading Speed</h2>
+            <p>A slow website frustrates users and increases bounce rates. Aim for a loading time of under 3 seconds. Optimize images, use lazy loading, and enable browser caching.</p>
+            <h3>Example: Lazy Loading Images</h3>
+            <p>Here's how to add lazy loading to images:</p>
+            <pre><code class="language-html">&lt;img src="example.jpg" alt="Example" loading="lazy"&gt;</code></pre>
+            <p><strong>Tool Tip:</strong> Test your site's speed with <a href="https://pagespeed.web.dev/" target="_blank">Google PageSpeed Insights</a> or <a href="https://developer.chrome.com/docs/lighthouse/overview/" target="_blank">Lighthouse</a>.</p>
+
+            <h2>Tip 4: Make Buttons and Links Clickable</h2>
+            <p>Buttons and links should be easy to click or tap. Ensure they have a minimum size of 44x44 pixels (as recommended by Apple) and provide visual feedback on hover or tap.</p>
+            <h3>Example: Hover Animation</h3>
+            <p>Here's a button with a hover effect:</p>
+            <button class="example-btn">Hover Me</button>
+            <pre><code class="language-css">.example-btn {
+    padding: 10px 20px;
+    background-color: #e67e22;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.example-btn:hover {
+    transform: scale(1.05);
+}
+
+.example-btn:active {
+    background-color: #d35400;
+}</code></pre>
+            <p><strong>Try it now:</strong> Hover over the button above to see the effect!</p>
+
+            <h2>Tip 5: Test with Real Users</h2>
+            <p>Testing with real users helps you identify pain points and improve your site. Use simple methods like the "5-second test" (ask users what they think of your site in 5 seconds) or A/B testing.</p>
+            <h3>Example Questions for User Testing:</h3>
+            <ul>
+                <li>Can you find the information you need quickly?</li>
+                <li>What frustrates you the most on this site?</li>
+                <li>Is the design visually appealing?</li>
+            </ul>
+            <p><strong>Tool Tip:</strong> Use <a href="https://www.hotjar.com/" target="_blank">Hotjar</a> for heatmaps or <a href="https://forms.google.com/" target="_blank">Google Forms</a> to collect feedback.</p>
+
+            <h2>Conclusion</h2>
+            <p>Improving UX/UI is an ongoing process, but these 5 tips will give you a strong start. Simplify navigation, use contrasting colors, optimize speed, make buttons clickable, and always test with real users. Your users will thank you!</p>
+            <p>Want to learn more? Check out <a href="https://www.amazon.com/Dont-Make-Me-Think-Usability/dp/0321965515" target="_blank">"Don't Make Me Think"</a> by Steve Krug for more UX insights.</p>
+        </div>
+    </section>
+
+    <section class="comments">
+        <div class="article-content">
+            <h2>Comments</h2>
+            <form action="https://formspree.io/f/movenarl" method="POST" class="comment-form">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <textarea name="comment" placeholder="Your Comment" required></textarea>
+                <button type="submit">Post Comment</button>
+            </form>
+            <div class="comment">
+                <p><strong>Jane Smith</strong> • March 16, 2025</p>
+                <p>Thanks for the tips! The dark mode toggle example was super helpful.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta">
+        <h2 class="section-title">Want to Collaborate?</h2>
+        <a href="https://www.fiverr.com/alexbashevnik" class="btn">Hire Me on Fiverr</a>
+    </section>
+
+    <button class="back-to-top" onclick="scrollToTop()">Back to Top</button>
+
+    <footer>
+        <p>© 2025 My Blog on Web Development. Design by HTML5 UP</p>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="JS/JS_article2/article2.js"></script>
+</body>
+</html>
