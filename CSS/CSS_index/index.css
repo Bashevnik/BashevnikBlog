@@ -1,5 +1,4 @@
 
-/* Reset and General Styles */
 a{
     text-decoration: none;
     color: #333;
@@ -12,7 +11,6 @@ a{
     text-decoration: none;
 }
 
-/* Reset and General Styles */
 * {
     margin: 0;
     padding: 0;
@@ -26,7 +24,6 @@ body {
     background-color: #fff;
 }
 
-/* Header */
 header {
     display: flex;
     justify-content: space-between;
@@ -56,7 +53,6 @@ nav a:hover {
     color: #e67e22;
 }
 
-/* Blog Posts Section */
 .blog-posts {
     padding: 40px 20px;
     margin-top: 40px;
@@ -156,7 +152,6 @@ nav a:hover {
     text-decoration: underline;
 }
 
-/* Categories Section */
 .categories {
     padding: 30px 20px;
     background-color: #f9f9f9;
@@ -192,7 +187,6 @@ nav a:hover {
     color: #fff;
 }
 
-/* Search Section */
 .search {
     padding: 20px;
     text-align: center;
@@ -217,7 +211,6 @@ nav a:hover {
     border-color: #e67e22;
 }
 
-/* Featured Post Section */
 .featured-post {
     padding: 30px 20px;
 }
@@ -227,7 +220,6 @@ nav a:hover {
     margin: 0 auto;
 }
 
-/* Subscribe Section */
 .subscribe {
     padding: 30px 20px;
     background-color: #f9f9f9;
@@ -270,13 +262,19 @@ nav a:hover {
     background-color: #d35400;
 }
 
-/* CTA Section */
 .cta {
     padding: 30px 20px;
     text-align: center;
     background-color: #f9f9f9;
 }
-
+#btn_Fiverr {
+    height: 4vh;
+    width: 10vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto; 
+}
 .btn {
     display: inline-block;
     padding: 8px 16px;
@@ -291,8 +289,6 @@ nav a:hover {
 .btn:hover {
     background-color: #d35400;
 }
-
-/* Footer */
 footer {
     padding: 20px;
     text-align: center;
@@ -305,7 +301,6 @@ footer p {
     color: #666;
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
     header {
         flex-direction: column;

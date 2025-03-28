@@ -1,4 +1,7 @@
-/* Reset and General Styles */
+a{
+    text-decoration: none; 
+    color: #333;
+}
 .navbar {
    display: flex;
    justify-content: flex-end;
@@ -17,7 +20,6 @@ body {
     background-color: #fff;
 }
 
-/* Header */
 header {
     display: flex;
     justify-content: space-between;
@@ -47,7 +49,6 @@ nav a:hover {
     color: #e67e22;
 }
 
-/* Article Hero Section */
 .article-hero {
     padding: 40px 20px;
     margin-top: 40px;
@@ -84,7 +85,6 @@ nav a:hover {
     margin: 20px 0;
 }
 
-/* Article Body Section */
 .article-body {
     padding: 40px 20px;
     max-width: 800px;
@@ -131,7 +131,6 @@ nav a:hover {
     font-size: 14px;
 }
 
-/* Example Image */
 .example-image {
     width: 100%;
     max-width: 200px;
@@ -139,7 +138,6 @@ nav a:hover {
     margin: 10px 0;
 }
 
-/* Comments Section */
 .comments {
     padding: 40px 20px;
     max-width: 800px;
@@ -201,7 +199,6 @@ nav a:hover {
     color: #666;
 }
 
-/* CTA Section */
 .cta {
     padding: 30px 20px;
     text-align: center;
@@ -229,7 +226,6 @@ nav a:hover {
     background-color: #d35400;
 }
 
-/* Back to Top Button */
 .back-to-top {
     position: fixed;
     bottom: 20px;
@@ -248,7 +244,6 @@ nav a:hover {
     background-color: #d35400;
 }
 
-/* Footer */
 footer {
     padding: 20px;
     text-align: center;
@@ -261,7 +256,6 @@ footer p {
     color: #666;
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
     header {
         flex-direction: column;
