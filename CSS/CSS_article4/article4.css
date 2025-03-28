@@ -15,7 +15,14 @@ body {
     color: #333;
     background-color: #fff;
 }
-
+#btn_Fiverr {
+    height: 70px;
+    width: 200px;
+    display: flex;  
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto; 
+}
 /* Header */
 header {
     display: flex;
